@@ -10,6 +10,7 @@ const ButtonComponent = (props) => {
             title={props.title}
             accessibilityLabel="Learn more about how to add data through this button"
             style={{ height: 50, width: 150 }}
+            disabled={props.disable}
         />
         </View>
     )

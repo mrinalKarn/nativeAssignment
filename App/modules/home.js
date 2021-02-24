@@ -36,7 +36,7 @@ const Home = ({ navigation }) => {
             <InputComponent placeholder={"Search Anime Here"} change={inputChange} value={input} />
             <Text>Sort</Text>
             <DropdownComponent data={sort} change={dropdownChange} value={selectedValue}/>
-            <ButtonComponent press={press} title="Add data"/>
+            <ButtonComponent press={press} title="Add data" disable={false}/>
             <Text>Anime List Goes Here....</Text>
             {dataStore.map(post => <Post key={post.id} post={post} navigation={navigation}/>)}
         </View>

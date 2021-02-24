@@ -23,8 +23,8 @@ const Post = (props) => {
             <Text>{props.post.year}</Text>
             <Text>{props.post.description}</Text>
             <Text>{props.post.rating}</Text>
-            <ButtonComponent press={editPost} title="edit"/>
-            <ButtonComponent press={deletePost} title="delete"/>
+            <ButtonComponent press={editPost} title="edit" disable={false}/>
+            <ButtonComponent press={deletePost} title="delete" disable={false}/>
         </View>
     )
 }

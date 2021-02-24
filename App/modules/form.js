@@ -61,7 +61,7 @@ const Form = ({route, navigation}) => {
             <InputComponent placeholder="Rating" change={val => changeRating(val)} value={rating}/>
             <Text>Description</Text>
             <InputComponent placeholder="Description" change={val => changeDescription(val)} value={description}/>
-            <ButtonComponent press={Click} title="submit"/>
+            <ButtonComponent press={Click} title="submit" disable={false}/>
         </View>
     )
 }
