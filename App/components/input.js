@@ -1,17 +1,17 @@
 import React from 'react';
 import { TextInput } from 'react-native';
 
-const Input = () => {
-  const [value, onChangeText] = React.useState('');
+const InputComponent = (props) => {
 
   return (
     <TextInput
       style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-      onChangeText={text => onChangeText(text)}
-      value={value}
-      placeholder = "input"
+      onChangeText={props.change}
+      value={props.value}
+      placeholder = {props.placeholder}
+      
     />
   );
 }
 
-export default Input;
+export default InputComponent;
