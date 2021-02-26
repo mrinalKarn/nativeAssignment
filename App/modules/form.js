@@ -49,7 +49,7 @@ const Form = ({route, navigation}) => {
     },[])
 
     return(
-        <View>
+        <View style={{flex:1,alignItems:'center'}}>
             <Text>{routeData.type} Data Form</Text>
             <Text>Name</Text>
             <InputComponent placeholder="Name" change={val => changeName(val)} value={name}/>

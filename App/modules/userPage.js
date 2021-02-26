@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,ScrollView } from 'react-native';
 import UserData from './../components/userData';
 import { paginationUser } from './../services/service';
 import { useEffect, useState } from 'react';
@@ -34,12 +34,12 @@ const UserPage = () => {
     }
 
     return (
-        <View>
+        <ScrollView>
             <Text>Pagination User Data</Text>
             <ButtonComponent press={decr} title="Prev" disable={prev}/>
             <ButtonComponent press={incr} title="Next" disable={next}/>
             {data.map(data => <UserData data={data} key={data.id}/>)}
-        </View>
+        </ScrollView>
     )
 }
 
