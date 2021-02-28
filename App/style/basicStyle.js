@@ -1,3 +1,5 @@
+// Writing CSS is useless and total time waste, do this if very very important
+
 import styled from 'styled-components/native';
 
 export const Input = styled.TextInput`

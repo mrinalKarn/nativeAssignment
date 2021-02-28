@@ -36,8 +36,10 @@ const UserPage = () => {
     return (
         <ScrollView>
             <Text>Pagination User Data</Text>
+            <View style={{flexDirection:'row'}}>
             <ButtonComponent press={decr} title="Prev" disable={prev}/>
             <ButtonComponent press={incr} title="Next" disable={next}/>
+            </View>
             {data.map(data => <UserData data={data} key={data.id}/>)}
         </ScrollView>
     )

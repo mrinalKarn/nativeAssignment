@@ -84,7 +84,7 @@ const Home = ({ navigation }) => {
                 <InputComponent placeholder={"Search Anime Here"} change={(val) => onChangeInput(val)} value={input} />
                 <Text>Sort</Text>
                 <DropdownComponent data={sortMethod} change={(itemValue) => setSelectedValue(itemValue)} value={selectedValue} />
-                <ButtonComponent press={press} title="Add data" disable={false} />
+                <ButtonComponent press={press} title="Add" disable={false} />
                 <Text>Anime List Goes Here....</Text>
                 {data.map(post => <Post key={post.id} post={post} navigation={navigation} />)}
             </View>
