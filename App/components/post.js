@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { deleteData } from "./../actions/action";
 import { StyleSheet, Text, View } from 'react-native';
 import ButtonComponent from './button';
+import {StyledText} from './../style/basicStyle';
 
 const Post = (props) => {
     const dispatch = useDispatch();
@@ -16,16 +17,15 @@ const Post = (props) => {
     }
 
     return (
-        <View>
-            <Text>{props.post.id}</Text>
-            <Text>{props.post.name}</Text>
-            <Text>{props.post.genre}</Text>
-            <Text>{props.post.year}</Text>
-            <Text>{props.post.description}</Text>
-            <Text>{props.post.rating}</Text>
+        <View style={{margin:4,padding:4,borderWidth:1, borderColor:'black' }}>
+            <StyledText type="large-bold">{props.post.name}</StyledText>
+            <StyledText type="italic">{props.post.genre}</StyledText>
+            <StyledText type="small">{props.post.year}</StyledText>
+            <StyledText>{props.post.description}</StyledText>
+            <StyledText type="italic">{props.post.rating}</StyledText>
             <View style={{flexDirection:'row'}}>
-            <ButtonComponent press={editPost} title="edit" disable={false}/>
-            <ButtonComponent press={deletePost} title="delete" disable={false}/>
+            <ButtonComponent press={editPost} title="edit" disable={false} type="edit"/>
+            <ButtonComponent press={deletePost} title="delete" disable={false} type="delete"/>
             </View>
         </View>
     )

@@ -1,3 +1,5 @@
+// No need to add on hover and on foucrs property like web, Android have some others design sense
+
 export const dark = {
     dark: '#1b1b1b',
     light: '#6d6d6d',

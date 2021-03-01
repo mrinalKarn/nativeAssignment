@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet,Dimensions } from 'react-native';
+import {TableEmail,TableName} from './../style/basicStyle';
 
 const deviceWidth = Dimensions.get('window').width;
 
 const UserData = (props) => {
 
     return (
-        <View className="post-container" style={styles.container}>
-            <Text style={{flexBasis:0.3*deviceWidth, paddingRight:5}}>{props.data.name}</Text>
-            <Text style={{flexGrow:1}}>{props.data.email}</Text>
+        <View style={styles.container}>
+            <TableName>{props.data.name}</TableName>
+            <TableEmail>{props.data.email}</TableEmail>
         </View>
     )
 }

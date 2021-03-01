@@ -6,7 +6,7 @@ const InputComponent = (props) => {
 
   return (
     <Input
-      style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+      type = {props.type}
       onChangeText={props.change}
       value={props.value}
       placeholder = {props.placeholder}

@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text,ScrollView } from 'react-native';
+import { View, Text,ScrollView,StyleSheet} from 'react-native';
 import UserData from './../components/userData';
 import { paginationUser } from './../services/service';
 import { useEffect, useState } from 'react';
 import ButtonComponent from '../components/button';
+import {TableEmail,TableName,StyledText} from './../style/basicStyle';
 
 const UserPage = () => {
     const [data, setData] = useState([]);
@@ -35,10 +36,14 @@ const UserPage = () => {
 
     return (
         <ScrollView>
-            <Text>Pagination User Data</Text>
+            <StyledText type="h1">Pagination User Data</StyledText>
             <View style={{flexDirection:'row'}}>
-            <ButtonComponent press={decr} title="Prev" disable={prev}/>
-            <ButtonComponent press={incr} title="Next" disable={next}/>
+            <ButtonComponent press={decr} title="Prev" disable={prev} type="prev"/>
+            <ButtonComponent press={incr} title="Next" disable={next} type="next"/>
+            </View>
+            <View style={styles.container}>
+                <TableName type="large-bold">Name</TableName>
+                <TableEmail type="large-bold">Email</TableEmail>
             </View>
             {data.map(data => <UserData data={data} key={data.id}/>)}
         </ScrollView>
@@ -46,3 +51,11 @@ const UserPage = () => {
 }
 
 export default UserPage;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'row',
+        background: 'red'
+    }
+})

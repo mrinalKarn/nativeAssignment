@@ -5,6 +5,7 @@ import InputComponent from './../components/input';
 import DropdownComponent from './../components/dropdown';
 import { useSelector } from 'react-redux';
 import Post from './../components/post';
+import {StyledText} from './../style/basicStyle';
 
 var uniqid = require('uniqid');
 
@@ -79,13 +80,11 @@ const Home = ({ navigation }) => {
 
     return (
         <ScrollView>
-            <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text>Anime List</Text>
-                <InputComponent placeholder={"Search Anime Here"} change={(val) => onChangeInput(val)} value={input} />
-                <Text>Sort</Text>
-                <DropdownComponent data={sortMethod} change={(itemValue) => setSelectedValue(itemValue)} value={selectedValue} />
-                <ButtonComponent press={press} title="Add" disable={false} />
-                <Text>Anime List Goes Here....</Text>
+            <View style={{ flex: 1, alignItems: 'center'}}>
+                <StyledText type="h1">Anime List</StyledText>
+                <InputComponent placeholder={"Search Anime Here"} change={(val) => onChangeInput(val)} value={input} type="search"/>
+                <DropdownComponent data={sortMethod} change={(itemValue) => setSelectedValue(itemValue)} value={selectedValue} type="add"/>
+                <ButtonComponent press={press} title="Add" disable={false} type="add"/>
                 {data.map(post => <Post key={post.id} post={post} navigation={navigation} />)}
             </View>
         </ScrollView>
