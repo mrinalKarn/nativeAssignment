@@ -17,7 +17,7 @@ const Post = (props) => {
     }
 
     return (
-        <View style={{margin:4,padding:4,borderWidth:1, borderColor:'black' }}>
+        <View style={{margin:4,padding:4,borderWidth:1, borderColor:'black',backgroundColor:'#e1e2e1' }}>
             <StyledText type="large-bold">{props.post.name}</StyledText>
             <StyledText type="italic">{props.post.genre}</StyledText>
             <StyledText type="small">{props.post.year}</StyledText>

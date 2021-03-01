@@ -33,6 +33,7 @@ ${props => {
 //name,year,rating,descr, search
 export const StyledText = styled.Text`
 margin-top :4px;
+color : ${props => props.theme.dark}
 ${props => {
         switch (props.type) {
             case "h1":

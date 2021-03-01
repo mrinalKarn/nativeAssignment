@@ -68,7 +68,7 @@ const TabScreens = () => {
 };
 
 export default function App() {
-  const [appTheme,changeTheme] = React.useState(theme.light);
+  const [appTheme,changeTheme] = React.useState(theme.dark);
   const toggle = ( ) => {                         //Wow, theme changing very perfectly, great mkk
     if(appTheme==theme.light) changeTheme(theme.dark);
     else changeTheme(theme.light);
